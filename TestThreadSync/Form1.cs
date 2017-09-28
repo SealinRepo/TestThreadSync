@@ -50,7 +50,6 @@ namespace TestThreadSync
                 Task.Factory.StartNew(() =>
                 {
                     Type t = Type.GetType(string.Format("common.{0}Test,common", comboBox1.Text));
-                    object[] objs = new object[1];
                     ISyncType o = Activator.CreateInstance(t) as ISyncType;
                     o.doWork(textBox1);
                 });
